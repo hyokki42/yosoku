@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購入予測</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>購入予測</h1>
+        <label for="itemSelect">購入アイテム：</label>
+        <select id="itemSelect">
+            <option value="toiletPaper">トイレットペーパー</option>
+            <option value="tissue">ティッシュペーパー</option>
+            <!-- 他のアイテムも追加 -->
+        </select>
+        <br>
+        <label for="currentPurchaseDate">今回の購入日：</label>
+        <input type="date" id="currentPurchaseDate" max="9999-12-31" />
+        <br>
+        <button onclick="calculateNextPurchase()">次の購入予測</button>
+        <button onclick="clearPurchaseHistory()">履歴をクリア</button>
+        <br>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
